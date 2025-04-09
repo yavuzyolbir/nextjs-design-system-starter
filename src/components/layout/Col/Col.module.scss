@@ -1,0 +1,56 @@
+// COL
+@use "@/mixins";
+@use "sass:math";
+
+.col {
+  box-sizing: border-box;
+}
+
+// Base span (mobile first)
+@for $i from 1 through 12 {
+  .span#{$i},
+  .mobile-span#{$i} {
+    flex: 0 0 math.percentage(math.div($i, 12));
+    max-width: math.percentage(math.div($i, 12));
+  }
+}
+
+// verticalTablet (min-width: 768px)
+@include mixins.from-vertical-tablet {
+  @for $i from 1 through 12 {
+    .verticalTablet-span#{$i} {
+      flex: 0 0 math.percentage(math.div($i, 12));
+      max-width: math.percentage(math.div($i, 12));
+    }
+  }
+}
+
+// tablet (min-width: 992px)
+@include mixins.from-tablet {
+  @for $i from 1 through 12 {
+    .tablet-span#{$i} {
+      flex: 0 0 math.percentage(math.div($i, 12));
+      max-width: math.percentage(math.div($i, 12));
+    }
+  }
+}
+
+// desktop (min-width: 1200px)
+@include mixins.from-desktop {
+  @for $i from 1 through 12 {
+    .desktop-span#{$i} {
+      flex: 0 0 math.percentage(math.div($i, 12));
+      max-width: math.percentage(math.div($i, 12));
+    }
+  }
+}
+
+// largeDesktop (min-width: 1440px)
+@include mixins.from-large-desktop {
+  @for $i from 1 through 12 {
+    .largeDesktop-span#{$i} {
+      flex: 0 0 math.percentage(math.div($i, 12));
+      max-width: math.percentage(math.div($i, 12));
+    }
+  }
+}

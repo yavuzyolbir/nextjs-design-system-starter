@@ -1,1 +1,0 @@
-# nextjs-design-system-starter

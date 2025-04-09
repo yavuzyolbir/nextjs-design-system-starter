@@ -1,0 +1,106 @@
+// VARIABLES
+
+// --> Typography
+:root {
+  // ~~ body
+  --body-font-family: var(--font-inter);
+  --body-font-size: 1.125rem;
+  --body-line-height: 1.5;
+
+  // ~~ h1
+  --h1-font-size-mobile: 2.375rem;
+  --h1-font-size-desktop: 3.75rem;
+
+  // ~~ h2
+  --h2-font-size-mobile: 1.875rem;
+  --h2-font-size-desktop: 2.25rem;
+
+  // ~~ h3
+  --h3-font-size-mobile: 1.75rem;
+  --h3-font-size-desktop: 1.875rem;
+
+  // ~~ h4
+  --h4-font-size-mobile: 1.5rem;
+  --h4-font-size-desktop: 1.5rem;
+
+  // ~~ h5
+  --h5-font-size-mobile: 1.25rem;
+  --h5-font-size-desktop: 1.25rem;
+
+  // ~~ h6
+  --h6-font-size-mobile: 1rem;
+  --h6-font-size-desktop: 1rem;
+}
+
+// --> Colors
+:root {
+  // ~~ neutral
+  $colors_neutral: (
+    "950": "#000",
+    "900": "#111",
+    "800": "#222",
+  );
+  @each $key, $color in $colors_neutral {
+    --color-neutral-#{$key}: #{$color};
+  }
+
+  // ~~ primary
+  $colors_primary: (
+    "950": "#000",
+    "900": "#111",
+    "800": "#222",
+  );
+  @each $key, $color in $colors_primary {
+    --color-primary-#{$key}: #{$color};
+  }
+
+  // ~~ auxiliary
+  $colors_auxiliary: (
+    "950": "#000",
+    "900": "#111",
+    "800": "#222",
+  );
+  @each $key, $color in $colors_auxiliary {
+    --color-auxiliary-#{$key}: #{$color};
+  }
+
+  // ~~ danger
+  $colors_danger: (
+    "950": "#000",
+    "900": "#111",
+    "800": "#222",
+  );
+  @each $key, $color in $colors_danger {
+    --color-danger-#{$key}: #{$color};
+  }
+
+  // ~~ success
+  $colors_success: (
+    "950": "#000",
+    "900": "#111",
+    "800": "#222",
+  );
+  @each $key, $color in $colors_success {
+    --color-success-#{$key}: #{$color};
+  }
+
+  // ~~ warning
+  $colors_warning: (
+    "950": "#000",
+    "900": "#111",
+    "800": "#222",
+  );
+  @each $key, $color in $colors_warning {
+    --color-warning-#{$key}: #{$color};
+  }
+
+  // ~~ info
+  $colors_info: (
+    "950": "#000",
+    "900": "#111",
+    "800": "#222",
+  );
+  @each $key, $color in $colors_info {
+    --color-info-#{$key}: #{$color};
+  }
+}

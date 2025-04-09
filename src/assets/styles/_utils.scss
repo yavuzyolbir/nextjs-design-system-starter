@@ -1,0 +1,162 @@
+// UTILS
+@use "@/mixins";
+
+// --> Typography
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+// --> Text Alignment
+$text-alignments: (
+  "left": left,
+  "center": center,
+  "right": right,
+);
+@each $name, $value in $text-alignments {
+  .text-#{$name} {
+    text-align: $value;
+  }
+  @include mixins.small-than-tablet {
+    .text-#{$name}-for-mobile {
+      text-align: $value;
+    }
+  }
+  @include mixins.from-tablet {
+    .text-#{$name}-for-desktop {
+      text-align: $value;
+    }
+  }
+}
+
+// --> Flexbox Alignment
+$alignments: (
+  "start": flex-start,
+  "center": center,
+  "end": flex-end,
+);
+@each $name, $value in $alignments {
+  .align-items-#{$name} {
+    align-items: $value;
+  }
+  .justify-#{$name} {
+    justify-content: $value;
+  }
+  @include mixins.small-than-tablet {
+    .align-items-#{$name}-for-mobile {
+      align-items: $value;
+    }
+    .justify-#{$name}-for-mobile {
+      justify-content: $value;
+    }
+  }
+  @include mixins.from-tablet {
+    .align-items-#{$name}-for-desktop {
+      align-items: $value;
+    }
+    .justify-#{$name}-for-desktop {
+      justify-content: $value;
+    }
+  }
+}
+
+// --> Spacing Scale
+$spacings: (
+  "0": 0,
+  "05": 0.5rem,
+  "1": 1rem,
+  "15": 1.5rem,
+  "2": 2rem,
+  "25": 2.5rem,
+  "3": 3rem,
+);
+@each $key, $value in $spacings {
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  @include mixins.small-than-tablet {
+    .mt-#{$key}-mobile {
+      margin-top: $value;
+    }
+    .mb-#{$key}-mobile {
+      margin-bottom: $value;
+    }
+  }
+
+  @include mixins.from-tablet {
+    .mt-#{$key}-desktop {
+      margin-top: $value;
+    }
+    .mb-#{$key}-desktop {
+      margin-bottom: $value;
+    }
+  }
+}
+
+// --> Padding Utilities
+@each $key, $value in $spacings {
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  @include mixins.small-than-tablet {
+    .pt-#{$key}-mobile {
+      padding-top: $value;
+    }
+    .pb-#{$key}-mobile {
+      padding-bottom: $value;
+    }
+  }
+
+  @include mixins.from-tablet {
+    .pt-#{$key}-desktop {
+      padding-top: $value;
+    }
+    .pb-#{$key}-desktop {
+      padding-bottom: $value;
+    }
+  }
+}
+
+// --> Display Utilities
+$displays: (
+  "inline": inline,
+  "inline-block": inline-block,
+  "flex": flex,
+  "inline-flex": inline-flex,
+  "none": none,
+);
+@each $key, $value in $displays {
+  .#{$key} {
+    display: $value;
+  }
+
+  @include mixins.small-than-tablet {
+    .#{$key}-mobile {
+      display: $value;
+    }
+  }
+
+  @include mixins.from-tablet {
+    .#{$key}-desktop {
+      display: $value;
+    }
+  }
+}

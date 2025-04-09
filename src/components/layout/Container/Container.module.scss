@@ -1,0 +1,12 @@
+// CONTAINER
+@use "@/mixins";
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  @include mixins.from-tablet {
+    padding-inline: 2rem;
+  }
+}

@@ -1,0 +1,14 @@
+// TYPOGRAPHY
+@use "@/mixins";
+
+@for $i from 1 through 6 {
+  h#{$i},
+  .h#{$i} {
+    font-weight: 600;
+    line-height: 1.3;
+    font-size: var(--h#{$i}-font-size-mobile);
+    @include mixins.from-tablet {
+      font-size: var(--h#{$i}-font-size-desktop);
+    }
+  }
+}
