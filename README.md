@@ -7,6 +7,7 @@ A solid, scalable **Next.js-based design system starter** to kickstart your UI d
 ## ✨ Features
 
 - ✅ Built with **Next.js**
+- 📕 Powered by **Storybook** for isolated UI component development
 - 🧱 Custom `Container`, `Row`, `Col` layout system
 - 🎨 Utility-first SCSS setup (`.mt-1`, `.pb-2`, `.text-center`, etc.)
 - 🧩 Integrated with **Storybook** for component-driven development
