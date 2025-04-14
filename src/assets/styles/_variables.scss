@@ -3,7 +3,7 @@
 // --> Typography
 :root {
   // ~~ body
-  --body-font-family: var(--font-inter);
+  --body-font-family: var(--font-geist);
   --body-font-size: 1.125rem;
   --body-line-height: 1.5;
 
@@ -34,11 +34,22 @@
 
 // --> Colors
 :root {
+  --color-white: #fff;
+  --color-black: #000;
+
   // ~~ neutral
   $colors_neutral: (
-    "950": "#000",
-    "900": "#111",
-    "800": "#222",
+    "50": "#f6f6f6",
+    "100": "#e7e7e7",
+    "200": "#d1d1d1",
+    "300": "#b0b0b0",
+    "400": "#888888",
+    "500": "#6d6d6d",
+    "600": "#5d5d5d",
+    "700": "#4f4f4f",
+    "800": "#454545",
+    "900": "#3d3d3d",
+    "950": "#111111",
   );
   @each $key, $color in $colors_neutral {
     --color-neutral-#{$key}: #{$color};
@@ -46,9 +57,17 @@
 
   // ~~ primary
   $colors_primary: (
-    "950": "#000",
-    "900": "#111",
-    "800": "#222",
+    "50": "#f0f4fe",
+    "100": "#dee7fb",
+    "200": "#c5d6f8",
+    "300": "#9dbcf3",
+    "400": "#6e97ec",
+    "500": "#4c74e5",
+    "600": "#3555d8",
+    "700": "#2e44c7",
+    "800": "#2c39a1",
+    "900": "#283580",
+    "950": "#1d224e",
   );
   @each $key, $color in $colors_primary {
     --color-primary-#{$key}: #{$color};
@@ -56,9 +75,17 @@
 
   // ~~ auxiliary
   $colors_auxiliary: (
-    "950": "#000",
-    "900": "#111",
-    "800": "#222",
+    "50": "#effaff",
+    "100": "#def5ff",
+    "200": "#b6edff",
+    "300": "#76e1ff",
+    "400": "#2dd2ff",
+    "500": "#01aee1",
+    "600": "#0099d3",
+    "700": "#007aaa",
+    "800": "#00678c",
+    "900": "#065574",
+    "950": "#04364d",
   );
   @each $key, $color in $colors_auxiliary {
     --color-auxiliary-#{$key}: #{$color};
@@ -66,9 +93,17 @@
 
   // ~~ danger
   $colors_danger: (
-    "950": "#000",
-    "900": "#111",
-    "800": "#222",
+    "50": "#fff1f2",
+    "100": "#ffe0e3",
+    "200": "#ffc6cb",
+    "300": "#ff9fa7",
+    "400": "#ff6875",
+    "500": "#fb3748",
+    "600": "#e9192b",
+    "700": "#c41121",
+    "800": "#a2121e",
+    "900": "#861620",
+    "950": "#49060c",
   );
   @each $key, $color in $colors_danger {
     --color-danger-#{$key}: #{$color};
@@ -76,9 +111,17 @@
 
   // ~~ success
   $colors_success: (
-    "950": "#000",
-    "900": "#111",
-    "800": "#222",
+    "50": #f1fcf3,
+    "100": #defae5,
+    "200": #bff3cb,
+    "300": #77e491,
+    "400": #53d573,
+    "500": #2cbb4f,
+    "600": #1f9a3d,
+    "700": #1c7934,
+    "800": #1b602c,
+    "900": #184f27,
+    "950": #082b12,
   );
   @each $key, $color in $colors_success {
     --color-success-#{$key}: #{$color};
@@ -86,9 +129,17 @@
 
   // ~~ warning
   $colors_warning: (
-    "950": "#000",
-    "900": "#111",
-    "800": "#222",
+    "50": "#fffee7",
+    "100": "#fffec1",
+    "200": "#fffa86",
+    "300": "#ffee41",
+    "400": "#ffde0d",
+    "500": "#ffcf00",
+    "600": "#d19800",
+    "700": "#a66c02",
+    "800": "#89540a",
+    "900": "#74450f",
+    "950": "#442404",
   );
   @each $key, $color in $colors_warning {
     --color-warning-#{$key}: #{$color};
@@ -96,9 +147,17 @@
 
   // ~~ info
   $colors_info: (
-    "950": "#000",
-    "900": "#111",
-    "800": "#222",
+    "50": "#effaff",
+    "100": "#def5ff",
+    "200": "#b6edff",
+    "300": "#76e1ff",
+    "400": "#2dd2ff",
+    "500": "#01aee1",
+    "600": "#0099d3",
+    "700": "#007aaa",
+    "800": "#00678c",
+    "900": "#065574",
+    "950": "#04364d",
   );
   @each $key, $color in $colors_info {
     --color-info-#{$key}: #{$color};

@@ -1,32 +1,35 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import  Button from '@/components/base/Button';
+import Button from "@/components/base/Button";
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
+  args: {
+    children: "Button Text",
+  },
   argTypes: {
-    children: {
-      control: {type: 'text'}
-    },
-    href:{
-      control: { type: 'text' },
-      description: "If href is present, it is created with the “a” tag"
-    },
     size: {
-      options: ['small', 'medium', 'large'],
-      control: { type: 'select' },
+      options: ["small", "medium", "large"],
+      control: { type: "select" },
     },
     color: {
-      options: ['primary', 'auxiliary', 'neutral'],
-      control: { type: 'select' },
+      options: ["primary", "auxiliary", "neutral"],
+      control: { type: "select" },
+    },
+    variant: {
+      options: ["filled", "outline", "ghost"],
+      control: { type: "select" },
+    },
+    block: {
+      type: "boolean",
     },
     disabled: {
-      control: { type: 'boolean' },
+      control: { type: "boolean" },
     },
     loading: {
-      control: { type: 'boolean' },
-    }
+      control: { type: "boolean" },
+    },
   },
 };
 
@@ -34,14 +37,17 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-  args: {
-    children: "Hello",
-  },
+  args: {},
 };
 
 export const Auxiliary: Story = {
   args: {
-    children: "Hello",
-    color: 'auxiliary'
+    color: "auxiliary",
+  },
+};
+
+export const Neutral: Story = {
+  args: {
+    color: "neutral",
   },
 };

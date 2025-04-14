@@ -4,39 +4,126 @@
   display: inline-flex;
   text-decoration: none;
   align-items: center;
+  gap: 0.75rem;
   justify-content: center;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   font-size: 1.125rem;
-  padding-inline: 1.25rem;
+  padding-inline: 1rem;
   font-weight: 500;
   min-width: 5.5rem;
   user-select: none;
+  white-space: nowrap;
+  transition: all 200ms 0s ease;
+  &:active {
+    transform: translateY(1px);
+  }
 }
 
 // -> Sizes
 .small {
-  height: 2rem;
+  height: 1.5rem;
   font-size: 0.875rem;
 }
 .medium {
-  height: 3rem;
-  font-size: 1rem;
+  height: 2rem;
+  font-size: 0.875rem;
 }
 .large {
-  height: 3rem;
-  font-size: 1.25rem;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+// -> Variants
+.outline {
+  border-width: 1px;
+  border-style: solid;
 }
 
 // -> Colors
 .primary {
-  background-color: #005aff;
-  color: #fff;
+  &.filled {
+    background-color: var(--color-primary-500);
+    color: var(--color-white);
+    &:hover {
+      background-color: var(--color-primary-400);
+    }
+    &:active {
+      background-color: var(--color-primary-600);
+    }
+  }
+  &.outline {
+    border-color: var(--color-primary-300);
+    color: var(--color-primary-500);
+    &:hover {
+      background-color: var(--color-primary-500);
+      border-color: var(--color-primary-500);
+      color: var(--color-white);
+    }
+    &:active {
+      border-color: var(---color-primary-600);
+      background-color: var(--color-primary-600);
+    }
+  }
+  &.ghost {
+    color: var(--color-primary-500);
+    &:hover {
+      background-color: var(--color-primary-50);
+    }
+    &:active {
+      background-color: var(--color-primary-100);
+    }
+  }
 }
+
 .auxiliary {
-  background-color: sandybrown;
+  &.filled {
+    background-color: var(--color-auxiliary-500);
+    color: var(--color-white);
+    &:hover {
+      background-color: var(--color-auxiliary-400);
+    }
+    &:active {
+      background-color: var(--color-auxiliary-600);
+    }
+  }
+  &.outline {
+    border-color: var(--color-auxiliary-300);
+    color: var(--color-auxiliary-500);
+    &:hover {
+      border-color: var(--color-auxiliary-500);
+      background-color: var(--color-auxiliary-500);
+      color: var(--color-white);
+    }
+    &:active {
+      border-color: var(---color-auxiliary-600);
+      background-color: var(--color-auxiliary-600);
+    }
+  }
 }
+
 .neutral {
-  background-color: gray;
+  &.filled {
+    background-color: var(--color-neutral-500);
+    color: var(--color-white);
+    &:hover {
+      background-color: var(--color-neutral-400);
+    }
+    &:active {
+      background-color: var(--color-neutral-600);
+    }
+  }
+  &.outline {
+    border-color: var(--color-neutral-500);
+    color: var(--color-neutral-500);
+    &:hover {
+      background-color: var(--color-neutral-500);
+      color: var(--color-white);
+    }
+    &:active {
+      border-color: var(---color-neutral-600);
+      background-color: var(--color-neutral-600);
+    }
+  }
 }
 
 // -> States

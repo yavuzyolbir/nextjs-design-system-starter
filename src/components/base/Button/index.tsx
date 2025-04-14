@@ -8,15 +8,17 @@ import Styles from "./Button.module.scss";
 
 type ButtonSize = "small" | "medium" | "large";
 type ButtonColor = "primary" | "auxiliary" | "neutral";
+type ButtonVariant = "filled" | "outline" | "ghost";
 
-interface BaseProps {
+export interface BaseProps {
   size?: ButtonSize;
   color?: ButtonColor;
-  className?: string;
-  children: ReactNode;
+  variant?: ButtonVariant;
+  block?: boolean | "mobile" | "desktop";
   disabled?: boolean;
   loading?: boolean;
-  block?: boolean | "mobile" | "desktop";
+  className?: string;
+  children: ReactNode;
 }
 
 type ButtonAsButton = BaseProps &
@@ -39,6 +41,7 @@ const Button = React.forwardRef<
     {
       size = "medium",
       color = "primary",
+      variant = "filled",
       className = "",
       children,
       href,
@@ -53,6 +56,7 @@ const Button = React.forwardRef<
       Styles.button,
       Styles[size],
       Styles[color],
+      Styles[variant],
       {
         [Styles.disabled]: disabled,
         [Styles.loading]: loading,
