@@ -15,6 +15,10 @@
   font-weight: 700;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 // --> Text Alignment
 $text-alignments: (
   "left": left,
@@ -26,12 +30,12 @@ $text-alignments: (
     text-align: $value;
   }
   @include mixins.small-than-tablet {
-    .text-#{$name}-for-mobile {
+    .text-#{$name}-mobile {
       text-align: $value;
     }
   }
   @include mixins.from-tablet {
-    .text-#{$name}-for-desktop {
+    .text-#{$name}-desktop {
       text-align: $value;
     }
   }
@@ -42,6 +46,7 @@ $alignments: (
   "start": flex-start,
   "center": center,
   "end": flex-end,
+  "space-between": space-between,
 );
 @each $name, $value in $alignments {
   .align-items-#{$name} {
@@ -51,18 +56,18 @@ $alignments: (
     justify-content: $value;
   }
   @include mixins.small-than-tablet {
-    .align-items-#{$name}-for-mobile {
+    .align-items-#{$name}-mobile {
       align-items: $value;
     }
-    .justify-#{$name}-for-mobile {
+    .justify-#{$name}-mobile {
       justify-content: $value;
     }
   }
   @include mixins.from-tablet {
-    .align-items-#{$name}-for-desktop {
+    .align-items-#{$name}-desktop {
       align-items: $value;
     }
-    .justify-#{$name}-for-desktop {
+    .justify-#{$name}-desktop {
       justify-content: $value;
     }
   }
