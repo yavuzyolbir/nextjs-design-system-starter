@@ -8,7 +8,7 @@ import Styles from "./Button.module.scss";
 
 type ButtonSize = "small" | "medium" | "large";
 type ButtonColor = "primary" | "auxiliary" | "neutral";
-type ButtonVariant = "filled" | "outline" | "ghost";
+type ButtonVariant = "filled" | "outline" | "lighter" | "ghost";
 
 export interface BaseProps {
   size?: ButtonSize;
@@ -17,6 +17,8 @@ export interface BaseProps {
   block?: boolean | "mobile" | "desktop";
   disabled?: boolean;
   loading?: boolean;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
   className?: string;
   children: ReactNode;
 }
@@ -47,6 +49,8 @@ const Button = React.forwardRef<
       href,
       disabled = false,
       loading = false,
+      iconLeft,
+      iconRight,
       block = false,
       ...props
     },
@@ -67,16 +71,24 @@ const Button = React.forwardRef<
       className
     );
 
+    const buttonChildren = (
+      <>
+        {iconLeft && <div className={Styles.icon}>{iconLeft}</div>}
+        {children}
+        {iconRight && <div className={Styles.icon}>{iconRight}</div>}
+      </>
+    );
+
     if (href) {
       return (
         <Link
           href={href}
           ref={ref as React.Ref<HTMLAnchorElement>}
           className={combinedClassName}
-          aria-disabled={disabled ? "true" : undefined}
-          tabIndex={disabled ? -1 : undefined}
+          aria-disabled={disabled || loading ? "true" : undefined}
+          tabIndex={disabled || loading ? -1 : undefined}
           onClick={(e) => {
-            if (disabled) {
+            if (disabled || loading) {
               e.preventDefault();
               return;
             }
@@ -88,7 +100,7 @@ const Button = React.forwardRef<
           }}
           {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
         >
-          {children}
+          {buttonChildren}
         </Link>
       );
     }
@@ -97,10 +109,10 @@ const Button = React.forwardRef<
       <button
         ref={ref as React.Ref<HTMLButtonElement>}
         className={combinedClassName}
-        disabled={disabled}
+        disabled={disabled || loading}
         {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}
       >
-        {children}
+        {buttonChildren}
       </button>
     );
   }

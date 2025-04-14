@@ -49,46 +49,55 @@
     "700": "#4f4f4f",
     "800": "#454545",
     "900": "#3d3d3d",
-    "950": "#111111",
+    "950": "#171717",
   );
   @each $key, $color in $colors_neutral {
     --color-neutral-#{$key}: #{$color};
+    --color-neutral-#{$key}-alpha-75: #{$color}75;
+    --color-neutral-#{$key}-alpha-50: #{$color}50;
+    --color-neutral-#{$key}-alpha-25: #{$color}25;
   }
 
   // ~~ primary
   $colors_primary: (
-    "50": "#f0f4fe",
-    "100": "#dee7fb",
-    "200": "#c5d6f8",
-    "300": "#9dbcf3",
-    "400": "#6e97ec",
-    "500": "#4c74e5",
-    "600": "#3555d8",
-    "700": "#2e44c7",
-    "800": "#2c39a1",
-    "900": "#283580",
-    "950": "#1d224e",
+    "50": "#eef3ff",
+    "100": "#d9e3ff",
+    "200": "#bccfff",
+    "300": "#8eb1ff",
+    "400": "#5986ff",
+    "500": "#335cff",
+    "600": "#1b38f5",
+    "700": "#1425e1",
+    "800": "#1720b6",
+    "900": "#19228f",
+    "950": "#141757",
   );
   @each $key, $color in $colors_primary {
     --color-primary-#{$key}: #{$color};
+    --color-primary-#{$key}-alpha-75: #{$color}75;
+    --color-primary-#{$key}-alpha-50: #{$color}50;
+    --color-primary-#{$key}-alpha-25: #{$color}25;
   }
 
   // ~~ auxiliary
   $colors_auxiliary: (
-    "50": "#effaff",
-    "100": "#def5ff",
-    "200": "#b6edff",
-    "300": "#76e1ff",
-    "400": "#2dd2ff",
-    "500": "#01aee1",
-    "600": "#0099d3",
-    "700": "#007aaa",
-    "800": "#00678c",
-    "900": "#065574",
-    "950": "#04364d",
+    "50": "#f5f3ff",
+    "100": "#ede9fe",
+    "200": "#ddd6fe",
+    "300": "#c4b5fd",
+    "400": "#a78bfa",
+    "500": "#8b5cf6",
+    "600": "#7c3aed",
+    "700": "#6d28d9",
+    "800": "#5b21b6",
+    "900": "#4c1d95",
+    "950": "#2e1065",
   );
   @each $key, $color in $colors_auxiliary {
     --color-auxiliary-#{$key}: #{$color};
+    --color-auxiliary-#{$key}-alpha-75: #{$color}75;
+    --color-auxiliary-#{$key}-alpha-50: #{$color}50;
+    --color-auxiliary-#{$key}-alpha-25: #{$color}25;
   }
 
   // ~~ danger
@@ -107,6 +116,9 @@
   );
   @each $key, $color in $colors_danger {
     --color-danger-#{$key}: #{$color};
+    --color-danger-#{$key}-alpha-75: #{$color}75;
+    --color-danger-#{$key}-alpha-50: #{$color}50;
+    --color-danger-#{$key}-alpha-25: #{$color}25;
   }
 
   // ~~ success
@@ -125,6 +137,9 @@
   );
   @each $key, $color in $colors_success {
     --color-success-#{$key}: #{$color};
+    --color-success-#{$key}-alpha-75: #{$color}75;
+    --color-success-#{$key}-alpha-50: #{$color}50;
+    --color-success-#{$key}-alpha-25: #{$color}25;
   }
 
   // ~~ warning
@@ -143,6 +158,9 @@
   );
   @each $key, $color in $colors_warning {
     --color-warning-#{$key}: #{$color};
+    --color-warning-#{$key}-alpha-75: #{$color}75;
+    --color-warning-#{$key}-alpha-50: #{$color}50;
+    --color-warning-#{$key}-alpha-25: #{$color}25;
   }
 
   // ~~ info
@@ -161,5 +179,17 @@
   );
   @each $key, $color in $colors_info {
     --color-info-#{$key}: #{$color};
+    --color-info-#{$key}-alpha-75: #{$color}75;
+    --color-info-#{$key}-alpha-50: #{$color}50;
+    --color-info-#{$key}-alpha-25: #{$color}25;
   }
+}
+
+// --> Radius
+:root {
+  --radius-xs: 0.25rem;
+  --radius-s: 0.5rem;
+  --radius-m: 1rem;
+  --radius-l: 1.5rem;
+  --radius-xl: 2rem;
 }

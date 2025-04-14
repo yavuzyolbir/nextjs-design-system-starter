@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Button from "@/components/base/Button";
+import { ChevronRight } from "@/components/base/Icons";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -18,7 +19,7 @@ const meta: Meta<typeof Button> = {
       control: { type: "select" },
     },
     variant: {
-      options: ["filled", "outline", "ghost"],
+      options: ["filled", "outline", "lighter", "ghost"],
       control: { type: "select" },
     },
     block: {
@@ -38,6 +39,7 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {},
+  name: "Primary With Icon",
 };
 
 export const Auxiliary: Story = {
@@ -49,5 +51,11 @@ export const Auxiliary: Story = {
 export const Neutral: Story = {
   args: {
     color: "neutral",
+  },
+};
+
+export const WithIcon: Story = {
+  args: {
+    iconRight: <ChevronRight />,
   },
 };
