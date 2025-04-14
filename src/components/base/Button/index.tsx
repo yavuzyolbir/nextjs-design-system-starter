@@ -1,5 +1,8 @@
+"use client";
+
 import React, { ReactNode } from "react";
 import cn from "classnames";
+import Link from "@/components/next/Link";
 
 import Styles from "./Button.module.scss";
 
@@ -61,21 +64,28 @@ const Button = React.forwardRef<
     );
 
     if (href) {
-      const anchorProps =
-        props as React.AnchorHTMLAttributes<HTMLAnchorElement>;
-
       return (
-        <a
-          ref={ref as React.Ref<HTMLAnchorElement>}
+        <Link
           href={href}
+          ref={ref as React.Ref<HTMLAnchorElement>}
           className={combinedClassName}
-          tabIndex={disabled ? -1 : undefined}
           aria-disabled={disabled ? "true" : undefined}
-          onClick={disabled ? (e) => e.preventDefault() : anchorProps.onClick}
-          {...anchorProps}
+          tabIndex={disabled ? -1 : undefined}
+          onClick={(e) => {
+            if (disabled) {
+              e.preventDefault();
+              return;
+            }
+
+            const onClick = (
+              props as React.AnchorHTMLAttributes<HTMLAnchorElement>
+            ).onClick;
+            if (onClick) onClick(e);
+          }}
+          {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
         >
           {children}
-        </a>
+        </Link>
       );
     }
 
