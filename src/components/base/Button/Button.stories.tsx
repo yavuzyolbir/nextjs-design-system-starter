@@ -39,7 +39,6 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {},
-  name: "Primary With Icon",
 };
 
 export const Auxiliary: Story = {

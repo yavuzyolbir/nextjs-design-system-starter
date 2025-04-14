@@ -149,6 +149,7 @@ $colors: "primary", "auxiliary";
   }
 }
 
+// -> Loading
 @keyframes loadingIntro {
   0% {
     opacity: 0;
@@ -157,7 +158,6 @@ $colors: "primary", "auxiliary";
     opacity: 1;
   }
 }
-
 @keyframes spinnerIntro {
   0% {
     opacity: 0;
@@ -166,13 +166,11 @@ $colors: "primary", "auxiliary";
     opacity: 1;
   }
 }
-
 @keyframes spinnerLoop {
   100% {
     transform: rotate(1turn);
   }
 }
-
 .loading {
   pointer-events: none;
   &::before {
