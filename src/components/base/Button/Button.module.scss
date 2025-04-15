@@ -71,7 +71,7 @@ $colors: "primary", "auxiliary";
     }
     &.loading {
       &::before {
-        background-color: var(--color-#{$color}-900-alpha-50);
+        background-color: var(--color-#{$color}-500);
       }
     }
   }
@@ -108,7 +108,7 @@ $colors: "primary", "auxiliary";
   }
   &.loading {
     &::before {
-      background-color: var(--color-neutral-900-alpha-50);
+      background-color: var(--color-neutral-950);
     }
   }
 }
