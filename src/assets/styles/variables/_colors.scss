@@ -1,38 +1,5 @@
-// VARIABLES
+// COLORS
 
-// --> Typography
-:root {
-  // ~~ body
-  --body-font-family: var(--font-geist);
-  --body-font-size: 1.125rem;
-  --body-line-height: 1.5;
-
-  // ~~ h1
-  --h1-font-size-mobile: 2.375rem;
-  --h1-font-size-desktop: 3.75rem;
-
-  // ~~ h2
-  --h2-font-size-mobile: 1.875rem;
-  --h2-font-size-desktop: 2.25rem;
-
-  // ~~ h3
-  --h3-font-size-mobile: 1.75rem;
-  --h3-font-size-desktop: 1.875rem;
-
-  // ~~ h4
-  --h4-font-size-mobile: 1.5rem;
-  --h4-font-size-desktop: 1.5rem;
-
-  // ~~ h5
-  --h5-font-size-mobile: 1.25rem;
-  --h5-font-size-desktop: 1.25rem;
-
-  // ~~ h6
-  --h6-font-size-mobile: 1rem;
-  --h6-font-size-desktop: 1rem;
-}
-
-// --> Colors
 :root {
   --color-white: #fff;
   --color-black: #000;
@@ -183,13 +150,4 @@
     --color-info-#{$key}-alpha-50: #{$color}50;
     --color-info-#{$key}-alpha-25: #{$color}25;
   }
-}
-
-// --> Radius
-:root {
-  --radius-xs: 0.25rem;
-  --radius-s: 0.5rem;
-  --radius-m: 1rem;
-  --radius-l: 1.5rem;
-  --radius-xl: 2rem;
 }

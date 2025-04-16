@@ -12,15 +12,15 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     size: {
       options: ["small", "medium", "large"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     color: {
       options: ["primary", "auxiliary", "neutral"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     variant: {
       options: ["filled", "outline", "lighter", "ghost"],
-      control: { type: "select" },
+      control: { type: "radio" },
     },
     block: {
       type: "boolean",

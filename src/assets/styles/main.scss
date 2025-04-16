@@ -1,5 +1,7 @@
 @use "reset";
-@use "variables";
+@use "variables/text";
+@use "variables/colors";
+@use "variables/radius";
 @use "structure";
 @use "typography";
 @use "utils";

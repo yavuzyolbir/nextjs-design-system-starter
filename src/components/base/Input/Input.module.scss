@@ -1,0 +1,65 @@
+// INPUT
+
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  font-size: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-neutral-200);
+  color: var(--color-neutral-950);
+  display: block;
+  width: 100%;
+  padding-inline: 0.75rem;
+  border-radius: var(--radius-s);
+  &::placeholder {
+    color: var(--color-neutral-300);
+  }
+  &:focus {
+    border-color: var(--color-primary-500);
+    outline: none;
+  }
+}
+
+// -> Sizes
+.small {
+  height: 2rem;
+}
+.medium {
+  height: 2.25rem;
+}
+.large {
+  height: 2.5rem;
+}
+
+// -> Label
+.label {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+// -> Info Text
+.infoText {
+  font-size: 0.75rem;
+  color: var(--color-neutral-400);
+  padding-top: 0.25rem;
+}
+
+// -> Right Affix
+.rightAffix {
+  background-color: lime;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-inline: 0.75rem;
+}
