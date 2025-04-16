@@ -13,6 +13,7 @@ const meta: Meta<typeof Button> = {
     size: {
       options: ["small", "medium", "large"],
       control: { type: "radio" },
+      description: undefined,
     },
     color: {
       options: ["primary", "auxiliary", "neutral"],
