@@ -1,29 +1,55 @@
 // INPUT
 
 .wrapper {
-  margin-bottom: 1rem;
-}
-
-.inputWrapper {
-  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  --color-input-background-color: var(--color-white);
+  --color-input-background-hover: var(--color-neutral-50);
+  --color-placeholder: var(--color-neutral-300);
+  --color-default: var(--color-neutral-950);
+  --focus-outline-color: var(--color-neutral-950);
+  --focus-shadow-color: var(--color-neutral-100);
 }
 
 .input {
+  border-color: var(--color-neutral-200);
+  color: var(--color-default);
+  background-color: var(--color-input-background-color);
+  border-radius: var(--radius-s);
   font-size: 1rem;
   border-width: 1px;
   border-style: solid;
-  border-color: var(--color-neutral-200);
-  color: var(--color-neutral-950);
   display: block;
   width: 100%;
-  padding-inline: 0.75rem;
-  border-radius: var(--radius-s);
-  &::placeholder {
-    color: var(--color-neutral-300);
+  padding-inline: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  &:hover {
+    border-color: var(--focus-outline-color);
   }
-  &:focus {
-    border-color: var(--color-primary-500);
-    outline: none;
+  &:has(input:focus) {
+    border-color: var(--focus-outline-color);
+    box-shadow: 0 0 0 4px var(--focus-shadow-color);
+    .leftIcon {
+      color: var(--color-default);
+    }
+  }
+}
+
+.htmlInput {
+  font-size: 1rem;
+  border: none;
+  padding: 0;
+  height: 100%;
+  flex: 1 0 auto;
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+  &::placeholder {
+    color: var(--color-placeholder);
   }
 }
 
@@ -32,10 +58,10 @@
   height: 2rem;
 }
 .medium {
-  height: 2.25rem;
+  height: 2.5rem;
 }
 .large {
-  height: 2.5rem;
+  height: 2.75rem;
 }
 
 // -> Label
@@ -52,14 +78,8 @@
 }
 
 // -> Right Affix
-.rightAffix {
-  background-color: lime;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  padding-inline: 0.75rem;
+.leftIcon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  color: var(--color-placeholder);
 }

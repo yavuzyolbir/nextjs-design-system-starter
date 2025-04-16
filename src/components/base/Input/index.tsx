@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes } from "react";
+import { FC, ReactNode, InputHTMLAttributes } from "react";
 
 import cn from "classnames";
 
@@ -10,6 +10,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   infoText?: string;
   inputSize?: "small" | "medium" | "large";
+  leftIcon?: ReactNode;
 }
 
 const Input: FC<InputProps> = ({
@@ -18,17 +19,16 @@ const Input: FC<InputProps> = ({
   inputSize = "medium",
   label = "",
   infoText = "",
+  leftIcon,
   ...props
 }) => {
   return (
     <div className={cn(Styles.wrapper, wrapperClassName)}>
       {label && <div className={Styles.label}>{label}</div>}
-      <div className={Styles.inputWrapper}>
-        <input
-          className={cn(Styles.input, Styles[inputSize], className)}
-          {...props}
-        />
-      </div>
+      <label className={cn(Styles.input, Styles[inputSize], className)}>
+        {leftIcon && <div className={Styles.leftIcon}>{leftIcon}</div>}
+        <input {...props} className={Styles.htmlInput} />
+      </label>
       {infoText && <div className={Styles.infoText}>{infoText}</div>}
     </div>
   );

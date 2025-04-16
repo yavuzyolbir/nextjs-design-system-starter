@@ -10,6 +10,9 @@
   justify-content: center;
   transition: all 200ms 0s ease;
   flex-shrink: 0;
+  &:active {
+    transform: translateY(1px);
+  }
   &:hover {
     border-color: var(--color-neutral-300);
     background-color: var(--color-primary-50);
@@ -24,6 +27,7 @@
   display: inline-flex;
   align-items: flex-start;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .label {
