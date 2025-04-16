@@ -9,8 +9,8 @@ const meta: Meta<typeof Checkbox> = {
     checked: {
       control: { type: "boolean" },
     },
-    label: {
-      control: { type: "text" },
+    children: {
+      type: "string",
     },
   },
 };
@@ -20,4 +20,16 @@ type Story = StoryObj<typeof Checkbox>;
 
 export const Default: Story = {
   args: {},
+};
+
+export const Checked: Story = {
+  args: {
+    checked: true,
+  },
+};
+
+export const WithLabel: Story = {
+  args: {
+    children: "Lorem ipsum dolor",
+  },
 };

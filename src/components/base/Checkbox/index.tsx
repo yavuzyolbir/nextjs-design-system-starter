@@ -1,4 +1,4 @@
-import { FC, ComponentPropsWithoutRef } from "react";
+import { FC, ComponentPropsWithoutRef, ReactNode } from "react";
 
 import * as RadixCheckbox from "@radix-ui/react-checkbox";
 import cn from "classnames";
@@ -10,18 +10,22 @@ import Styles from "./Checkbox.module.scss";
 type CheckboxRootProps = ComponentPropsWithoutRef<typeof RadixCheckbox.Root>;
 
 export interface CheckboxProps extends CheckboxRootProps {
-  label?: string;
+  children?: ReactNode;
 }
 
-const Checkbox: FC<CheckboxProps> = ({ label, className = "", ...props }) => {
+const Checkbox: FC<CheckboxProps> = ({
+  children,
+  className = "",
+  ...props
+}) => {
   return (
-    <label className={Styles.wrapper}>
+    <label className={cn({ [Styles.wrapper]: children })}>
       <RadixCheckbox.Root {...props} className={cn(Styles.checkbox, className)}>
         <RadixCheckbox.Indicator className={Styles.indicator}>
           <Check />
         </RadixCheckbox.Indicator>
       </RadixCheckbox.Root>
-      {label && <div className={Styles.label}>{label}</div>}
+      {children && <div className={Styles.label}>{children}</div>}
     </label>
   );
 };
