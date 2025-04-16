@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: var(--trasition-all);
   &:hover {
     border-color: var(--focus-outline-color);
   }
@@ -82,4 +83,5 @@
   font-size: 1.25rem;
   flex-shrink: 0;
   color: var(--color-placeholder);
+  transition: var(--trasition-all);
 }

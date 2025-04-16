@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 200ms 0s ease;
+  transition: var(--trasition-all);
   flex-shrink: 0;
   &:active {
     transform: translateY(1px);
@@ -26,7 +26,7 @@
 .wrapper {
   display: inline-flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
